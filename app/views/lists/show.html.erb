@@ -1,13 +1,28 @@
-<div class="container">
-  <h1><%= @list.name %></h1>
-  <%= link_to "Add a movie", new_list_bookmark_path(@list) %>
-  <%= link_to "Back", lists_path %>
-  <p>Movies</p>
-  <ul>
+<div class="show-banner">
+  <%= image_tag @list.image_url, alt: "list image" %>
+</div>
+<div class="container mt-3 mb-5">
+  <div class="d-flex align-items-end">
+    <h2 class="text-gray me-3">My Lists > </h2><h1><%= @list.name %></h1>
+  </div>
+  <div class="d-flex justify-content-between align-items-center">
+    <p class="text-blue">Movies</p>
+    <p><%= link_to "<i class='fas fa-plus'></i> Add a movie".html_safe, new_list_bookmark_path(@list), class: "add-link" %></p>
+  </div>
+  <div class="cards-product">
     <% @list.bookmarks.each do |bookmark| %>
-      <li>
-        <%= bookmark.comment %>
-      </li>
+        <div class="card-product">
+          <%= image_tag bookmark.movie.poster_url, alt: "poster image" %>
+          <div class="card-product-infos">
+            <%= link_to "<i class='fas fa-times'></i>".html_safe , bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: 'remove' %>
+            <h2><%= bookmark.movie.title %></h2>
+            <p><%= bookmark.movie.overview %></p>
+            <div class="d-flex justify-content-between align-items-end">
+              <p>"<%= bookmark.comment %>"</p>
+              <p><strong>Rating:</strong> <%= bookmark.movie.rating %>/10</p>
+            </div>
+          </div>
+        </div>
     <% end %>
-  </ul>
+  </div>
 </div>

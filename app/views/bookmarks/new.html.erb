@@ -1,8 +1,26 @@
-<div class="container">
-  <h1>Add a movie</h1>
-  <%= simple_form_for [@list, @bookmark] do |f| %>
-    <%= f.input :comment %>
-    <%= f.association :movie %>
-    <%= f.submit class: 'btn btn-primary'%>
-  <% end %>
+<div class="container mb-5">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-6 form p-3">
+      <h1>Add a movie</h1>
+      <% if @list.present? %>
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+          <%= f.association :movie, include_blank: false, collection: @movies %>
+          <%= f.input :comment %>
+          <%= f.submit class: 'button mb-3'%>
+        <% end %>
+        <div class="d-flex justify-content-center back-button-div">
+          <%= link_to "<i class='fas fa-undo'></i> Back".html_safe, lists_path, class: 'back-button' %>
+        </div>
+      <% elsif @movie.present? %>
+        <%= simple_form_for [@movie, @bookmark] do |f| %>
+          <%= f.association :list, include_blank: false, collection: @lists %>
+          <%= f.input :comment %>
+          <%= f.submit class: 'button mb-3'%>
+        <% end %>
+        <div class="d-flex justify-content-center back-button-div">
+          <%= link_to "<i class='fas fa-undo'></i> Back".html_safe, movie_path(@movie), class: 'back-button' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

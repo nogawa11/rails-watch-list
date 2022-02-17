@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row d-flex justify-content-center mt-5 mb-5">
+    <div class="col-7 gray-background pb-3">
+      <div class="d-flex justify-content-center">
+        <h1><%= @movie.title %></h1>
+      </div>
+      <%= image_tag @movie.poster_url %>
+      <div class="d-flex align-items-center mt-4">
+        <h5 class="me-3">Rating:</h5>
+        <h3>
+        <% @movie.rating.times do %>
+          <i class='fas fa-star'></i>
+        <% end %>
+        <% (10 - @movie.rating).times do %>
+          <i class="far fa-star"></i>
+        <% end %>
+        </h3>
+      </div>
+      <p><%= @movie.overview %></p>
+      <div class="d-flex justify-content-between mb-1">
+        <%= link_to(lists_path, class: "add-movies-link") do %>
+          <i class="fas fa-undo"></i> Back
+        <% end %>
+        <%= link_to(new_movie_bookmark_path(@movie), class: "add-movies-link") do %>
+          <i class="fas fa-plus"></i> Add to list
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+.button {
+  background-color:rgba(193,33,15,1);
+  color: rgb(243, 243, 243);
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  text-decoration: none;
+
+  &:hover {
+    background: rgb(91,13,3);
+    background: linear-gradient(0deg, rgba(91,13,3,0.36305732484076436) 0%, rgba(193,33,15,1) 100%);
+    color:rgb(245, 245, 245);
+    border: 1px solid white;
+    transition: 0.7s;
+  }
+}
+
+.add-link {
+  color: rgb(255, 48, 21);
+  text-decoration: none;
+
+  &:hover {
+    color:rgb(245, 245, 245);
+  }
+}
+
+.remove {
+  color: gray;
+  text-decoration: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.back-button {
+  color: rgb(228, 228, 228);
+  text-decoration: none;
+}
+
+.back-button-div {
+  margin: 0;
+  padding: 0;
+}
+
+
+.search-button {
+  background-color:rgb(219, 30, 9);
+  color: rgb(245, 245, 245);
+  border: 1px solid rgb(219, 30, 9);
+  padding: 0px 12px;
+  border: 0;
+  border-radius: 0 50px 50px 0;
+  margin-right: 0;
+  height: 35px;
+
+  &:hover {
+    background: rgba(193,33,15,0);
+    color: rgb(247, 247, 247);
+    border: 1px solid rgb(240, 240, 240);
+    transition: 0.5s;
+  }
+}
+
+.add-movies-link {
+  color: rgb(158, 158, 158);
+  text-decoration: none;
+  // position: absolute;
+  // bottom: 20px;
+  // right: 24px;
+
+  &:hover {
+    color:rgb(255, 48, 21);
+  }
+}

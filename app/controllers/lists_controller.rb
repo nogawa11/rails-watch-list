@@ -1,6 +1,12 @@
 class ListsController < ApplicationController
   def index
-    @lists = List.all
+    @movies = Movie.all
+    if params[:search].present?
+      @search_term = params[:search].downcase
+      @lists = List.where("lower(name) LIKE ?", "%#{@search_term}%")
+    else
+      @lists = List.all
+    end
   end
 
   def show

@@ -1,12 +1,17 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(0,0,0);
+
+  a {
+    color: rgb(255, 48, 21);
+
+   &:hover {
+    color: rgb(240, 240, 240);
+  }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
   width: 40px;
 }

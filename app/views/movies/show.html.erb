@@ -19,10 +19,10 @@
       <p><%= @movie.overview %></p>
       <div class="d-flex justify-content-between mb-1">
         <%= link_to(lists_path, class: "add-movies-link") do %>
-          <i class="fas fa-undo"></i> Back
+          <i class="fas fa-undo"></i> Back to home
         <% end %>
         <%= link_to(new_movie_bookmark_path(@movie), class: "add-movies-link") do %>
-          <i class="fas fa-plus"></i> Add to list
+          <i class="fas fa-plus"></i> Add this movie to a list
         <% end %>
       </div>
     </div>

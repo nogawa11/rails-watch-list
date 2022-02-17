@@ -7,7 +7,7 @@
   </div>
   <div class="d-flex justify-content-between align-items-center">
     <p class="text-blue">Movies</p>
-    <p><%= link_to "<i class='fas fa-plus'></i> Add a movie".html_safe, new_list_bookmark_path(@list), class: "add-link" %></p>
+    <p><%= link_to "<i class='fas fa-plus'></i> Add a movie to this list".html_safe, new_list_bookmark_path(@list), class: "add-link" %></p>
   </div>
   <div class="cards-product">
     <% @list.bookmarks.each do |bookmark| %>
@@ -22,6 +22,7 @@
               <p><strong>Rating:</strong> <%= bookmark.movie.rating %>/10</p>
             </div>
           </div>
+          <%= link_to "", movie_path(bookmark.movie), class: "link-cover"%>
         </div>
     <% end %>
   </div>

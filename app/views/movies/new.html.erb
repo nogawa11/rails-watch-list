@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row d-flex justify-content-center mt-5 mb-5">
+    <div class="col-6 form p-3">
+      <h1>Add a movie</h1>
+      <%= render 'form' %>
+      <div class="d-flex justify-content-center back-button-div">
+        <%= link_to "<i class='fas fa-undo'></i> Back".html_safe, lists_path, class: 'back-button mt-3' %>
+      </div>
+    </div>
+  </div>
+</div>

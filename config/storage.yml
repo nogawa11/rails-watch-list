@@ -11,11 +11,7 @@ cloudinary:
   service: Cloudinary
   folder: <%= Rails.env %>
 
-# config/environments/development.rb
-config.active_storage.service = :cloudinary
 
-# config/environments/production.rb
-config.active_storage.service = :cloudinary
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:

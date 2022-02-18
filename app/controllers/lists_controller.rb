@@ -6,7 +6,7 @@ class ListsController < ApplicationController
       @movies = Movie.where("lower(title) LIKE ?", "%#{@search_term}%")
     else
       @lists = List.all
-      @movies = Movie.all
+      @movies = Movie.all.order(title: :asc)
     end
   end
 

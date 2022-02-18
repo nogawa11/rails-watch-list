@@ -32,13 +32,13 @@
         </div>
     <% end %>
   </div>
-  <div class="reviews-card mt-4 d-flex justify-content-between align-items-end">
+  <div class="reviews-card mt-4 mb-1 d-flex justify-content-between align-items-end">
     <h3 class="text-gray">Reviews for <%= @list.name %></h3>
     <p><%= link_to "<i class='fas fa-plus'></i> Leave a review for this list".html_safe, new_list_review_path(@list), class: "add-link" %></p>
   </div>
-  <div class="review-card d-flex align-items-end justify-content-center mb-3">
-    <% @list.reviews.each do |review| %>
-      <h4 class="text-white mt-4 me-3">"<%= review.comment %>"</h4>
+  <% @list.reviews.each do |review| %>
+    <div class="review-card d-flex align-items-end justify-content-center">
+      <h4 class="text-white mt-3 me-3">"<%= review.comment %>"</h4>
       <div class="d-flex">
         <p>
         <% review.rating.times do %>
@@ -49,6 +49,6 @@
         <% end %>
         </p>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

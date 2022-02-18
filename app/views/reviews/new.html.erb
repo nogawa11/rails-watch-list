@@ -4,7 +4,7 @@
       <h1>Leave a review</h1>
       <%= simple_form_for [@list, @review] do |f| %>
       <%= f.input :comment %>
-      <%= f.input :rating, collection: 1..5 %>
+      <%= f.input :rating, collection: 0..5 %>
       <%= f.submit class: 'button mb-3'%>
       <% end %>
       <div class="d-flex justify-content-center back-button-div">

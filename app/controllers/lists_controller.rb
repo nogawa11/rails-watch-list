@@ -12,7 +12,13 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
-    @reviews = @list.reviews
+    @ratings = []
+    @list.reviews.each { |review| @ratings << review.rating }
+    if @list.reviews.present?
+      @average_ratings = "#{@ratings.sum.to_f / @ratings.count} / 5 stars"
+    else
+      @average_ratings = "No reviews at this time"
+    end
   end
 
   def new

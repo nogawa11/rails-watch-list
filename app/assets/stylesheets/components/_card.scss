@@ -139,3 +139,25 @@
     color: rgb(207, 36, 17);
   }
 }
+
+.reviews-card {
+  h3, p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.review-card {
+  h4 {
+    color: rgb(243, 243, 243);
+  }
+
+  h4, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    color: rgb(207, 36, 17);
+  }
+}

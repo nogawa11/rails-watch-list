@@ -1,0 +1,15 @@
+<div class="container mb-5">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-6 form p-3">
+      <h1>Leave a review</h1>
+      <%= simple_form_for [@list, @review] do |f| %>
+      <%= f.input :comment %>
+      <%= f.input :rating, collection: 1..5 %>
+      <%= f.submit class: 'button mb-3'%>
+      <% end %>
+      <div class="d-flex justify-content-center back-button-div">
+        <%= link_to "<i class='fas fa-undo'></i> Back".html_safe, list_path(@list), class: 'back-button' %>
+      </div>
+    </div>
+  </div>
+</div>

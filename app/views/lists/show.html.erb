@@ -1,5 +1,11 @@
 <div class="show-banner">
-  <%= image_tag @list.image_url, alt: "list image" %>
+  <% if @list.photo.attached? %>
+    <%= cl_image_tag(@list.photo.key) %>
+  <% elsif @list.image_url %>
+    <%= image_tag @list.image_url %>
+  <% else %>
+    <%= image_tag "https://images.unsplash.com/photo-1542272201-b1ca555f8505?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" %>
+  <% end %>
 </div>
 <div class="container mt-3 mb-5">
   <div class="d-flex align-items-end">

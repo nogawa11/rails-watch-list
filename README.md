@@ -1,4 +1,4 @@
-# 📚 Movie Watchlist
+# Movie Watchlist
 
 A movie watchlist app where you can create various lists for movies you have seen or plan to see. 
 

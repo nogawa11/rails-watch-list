@@ -2,7 +2,7 @@
 
 A movie watchlist app where you can create various lists for movies you have seen or plan to see. 
 
-![Screen Shot 2022-03-14 at 6 20 00 PM](https://user-images.githubusercontent.com/94948064/158142422-769b3a76-0b3b-4744-8a89-97a78c7d6ffb.png) ![Screen Shot 2022-03-14 at 6 20 13 PM](https://user-images.githubusercontent.com/94948064/158142446-bbca7e8e-3ece-4394-bc14-e8fec8640a3d.png) ![Screen Shot 2022-03-14 at 6 20 32 PM](https://user-images.githubusercontent.com/94948064/158142457-86440418-126d-44b6-85a0-b4a88485838f.png)
+![Screen Shot 2022-03-14 at 6 20 00 PM](https://user-images.githubusercontent.com/94948064/158142422-769b3a76-0b3b-4744-8a89-97a78c7d6ffb.png) ![Screen Shot 2022-03-14 at 6 20 13 PM](https://user-images.githubusercontent.com/94948064/158142446-bbca7e8e-3ece-4394-bc14-e8fec8640a3d.png)
 
 <br>
 App home: https://nicole-movie-watchlist.herokuapp.com/
